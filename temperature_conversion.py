@@ -16,19 +16,20 @@ def convert_to_celsius(fahrenheit):
     return (fahrenheit - 32) * 5/9
 
 def main():
-    choice = input("CHOOSE THE MENU:\n 1. c-f (Celsius to Fahrenheit) \n 2. f-c (Fahrenheit to Celsius)\n")
-    
-    if choice == "1":
-        celsius = float(input("Enter temperature in Celsius: "))
-        fahrenheit = convert_to_fahrenheit(celsius)
-        print(f"{celsius}°C = {fahrenheit}°F")
-    elif choice == "2":
-        fahrenheit = float(input("Enter temperature in Fahrenheit: "))
-        celsius = convert_to_celsius(fahrenheit)
-        print(f"{fahrenheit}°F = {celsius}°C")
-    else:
-        print("Please enter a valid number 1 or 2")
-
+    while True:
+        choice = input("CHOOSE THE MENU:\n 1. c-f (Celsius to Fahrenheit) \n 2. f-c (Fahrenheit to Celsius)\n")
+        
+        if choice == "1":
+            celsius = float(input("Enter temperature in Celsius: "))
+            fahrenheit = convert_to_fahrenheit(celsius)
+            print(f"{celsius}°C = {fahrenheit}°F")
+        elif choice == "2":
+            fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+            celsius = convert_to_celsius(fahrenheit)
+            print(f"{fahrenheit}°F = {celsius}°C")
+        else:
+            print("Please enter a valid number 1 or 2")
+      
 
 main()
 
